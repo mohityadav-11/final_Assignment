@@ -1,0 +1,24 @@
+<div class="container-table100">
+  <div class="wrap-table100">
+    <div class="pad table100 ver1">
+      <form (submit)="verifyEmployee()" #loginForm="ngForm" class="pad form-group">
+        <div style="text-align: center; margin-bottom: 0.9em;">
+          <img src="assets/images/user.png" >
+        </div>
+        <div class="form-group">
+          <label for="employeeEmail">Employee Email:</label>
+          <input
+          id="employeeEmail"
+          name="employeeEmail"
+          type="email"
+          required
+          #employeeEmail = "ngModel"
+          [(ngModel)]="fieldData"
+          class="form-control"
+          placeholder="Employee Email">
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary form-control">Log In</button>
+      </form>
+    </div>
+  </div>
+</div>

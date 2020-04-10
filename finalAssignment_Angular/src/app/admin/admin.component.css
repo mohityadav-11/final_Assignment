@@ -1,0 +1,13 @@
+.pad{
+  padding: 2.0em;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}

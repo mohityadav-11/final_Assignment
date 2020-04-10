@@ -1,0 +1,36 @@
+<div style="padding: 0.7em; margin-bottom: 2.0em;">
+  <button [routerLink]="['/addLeave/0']" type="button" class="btn">Add Leave</button>
+</div>
+
+ <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100 ver1">
+        <div class="table100-head">
+          <table>
+            <thead>
+              <tr>
+                <th class="column1">Leave Name</th>
+                <th class="column2">Number of days</th>
+                <th class="column5"></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="table100-body">
+          <table>
+            <tbody>
+              <tr *ngFor='let leave of service.leaveList'>
+                <td class="column1">{{ leave.leaveName }}</td>
+                <td class="column2">{{ leave.leaveMaxNoOfDays }}</td>
+                <td class="column5">
+                  <button  ion-button block [routerLink]='["/addLeave/"+leave.leaveId]' type="button" class="btn"><i class="fa fa-edit"></i></button>
+                  <button type="button" (click)="deleteLeave(leave.leaveId)" class="btn" style="margin-left: 0.6em;"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,49 @@
+
+  <div class="search-container" style="margin-bottom: 2.0em;">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+
+  <div style="padding: 0.7em; margin-bottom: 2.0em;">
+    <button [routerLink]="['/addEmp/0']" type="button" class="btn">Add Employee</button>
+  </div>
+
+
+ <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100 ver1">
+        <div class="table100-head">
+          <table>
+            <thead>
+              <tr>
+                <th class="column1">Employee Name</th>
+                <th class="column2">Email</th>
+                <th class="column3">Date of joining</th>
+                <th class="column4">Date of birth</th>
+                <th class="column5"></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="table100-body">
+          <table>
+            <tbody>
+              <tr *ngFor = 'let emp of service.empList'>
+                <td class="column1">{{ emp.employeeName }}</td>
+                <td class="column2">{{ emp.employeeEmail }}</td>
+                <td class="column3">{{ emp.employeeDoj | date:'dd/MM/yyyy' }}</td>
+                <td class="column4">{{ emp.employeeDob | date:'dd/MM/yyyy' }}</td>
+                <td class="column5">
+                  <button  ion-button block [routerLink]='["/addEmp/"+emp.emplyeeId]' type="button" class="btn"><i class="fa fa-edit"></i></button>
+                  <button type="button" (click)="deletedEmp(emp.emplyeeId)" class="btn" style="margin-left: 0.6em;"><i class="fa fa-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

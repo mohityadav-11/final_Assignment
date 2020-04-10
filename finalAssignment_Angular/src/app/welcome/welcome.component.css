@@ -1,0 +1,21 @@
+
+
+.back{
+  padding: 13.0em;
+  background-image: url('src\assets\images\management.png');
+  max-height: 100%;
+  background-size:100% 100%;
+}
+
+.center-element{
+  position: relative;
+}
+
+.btn-back{
+  color: blueviolet;
+  background-color: white;
+}
+
+.margin-left{
+  margin: 1.0em;
+}

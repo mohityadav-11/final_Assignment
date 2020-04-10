@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link"
+        [routerLink]="['employeeList']"
+        routerLinkActive="active">
+        Employee List
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+      [routerLink]="['leaveList']"
+      routerLinkActive="active">
+      Leave List
+    </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"
+      [routerLink]="['leaveConfig']"
+      routerLinkActive="active">
+      Leave Configuration
+    </a>
+  </ul>
+</nav>
+
+<div style="float: right; padding: 2.0em;">
+  <button class="btn"
+  [routerLink] = "['/welcome']">
+    Log out
+  </button>
+</div>
+
+
+<div class="pad">
+  <router-outlet></router-outlet>
+</div>
+
+

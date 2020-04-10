@@ -1,0 +1,48 @@
+<div class="container-table100">
+  <div class="wrap-table100">
+
+    <div>
+      <h4 style="text-align: center; padding: 0.5em; color: white;">Add Leave</h4>
+    </div>
+
+    <div class="pad table100 ver1">
+      <form #leaveForm="ngForm" autocomplete="off" (submit)="saveLeaveData(service.leave,leaveForm)" class="pad form-group">
+        <input type="hidden" name="leaveId" [value]="service.leave.leaveId" [(ngModel)]="service.leave.leaveId"/>
+        <div class="form-group">
+            <input
+            id="leaveName"
+            name="leaveName"
+            required
+            #leaveName="ngModel"
+            [(ngModel)]="service.leave.leaveName"
+            type="text"
+            class="form-control"
+            placeholder="Leave Name">
+        </div>
+        <div class="form-group">
+          <input
+          id="leaveMaxNoOfDays"
+          name="leaveMaxNoOfDays"
+          required
+          #leaveMaxNoOfDays="ngModel"
+          [(ngModel)]="service.leave.leaveMaxNoOfDays"
+          type="number"
+          class="form-control"
+          min="0"
+          placeholder="Number of days">
+        </div>
+        <button [disabled]="leaveForm.invalid" type="submit" class="btn btn-primary form-control">Save</button>
+      </form>
+    </div>
+
+    <div style="margin-top: 0.4em;">
+      <button
+      style="background-color: whitesmoke;"
+      class="btn"
+      [routerLink]="['/admin/leaveConfig']">
+      Back
+    </button>
+    </div>
+
+  </div>
+</div>

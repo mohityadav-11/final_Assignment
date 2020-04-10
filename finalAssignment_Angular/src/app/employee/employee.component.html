@@ -1,0 +1,38 @@
+<div style="float: left;" class="wrap-table100">
+  <div class="pad table100 ver1">
+    <form class="form-group">
+      <div style="text-align: center; margin-bottom: 0.9em;">
+        <img src="assets/images/user.png" >
+      </div>
+      <div>
+        <label>Name: {{empService.employee.employeeName}}</label>
+      </div>
+      <div>
+        <label>Dob: {{ empService.employee.employeeDob | date: 'dd/MM/yyyy' }}</label>
+      </div>
+      <div>
+        <label>Doj: {{ empService.employee.employeeDoj | date: 'dd/MM/yyyy' }}</label>
+      </div>
+      <div >
+        <label>Email: {{ empService.employee.employeeEmail }}</label>
+      </div>
+      <div style="margin-bottom: 1.0em; text-align: center;">
+        <button [routerLink]="['apply']" type="submit" class="btn btn-primary">Apply for leave</button>
+      </div>
+      <div style="margin-bottom: 1.0em; text-align: center;">
+        <button  [routerLink] = "['empLeaveList']" type="submit" class="btn btn-primary">Leaves list</button>
+      </div>
+      <div style="text-align: center;">
+        <button [routerLink] = "['/welcome']" type="submit" class="btn btn-primary">Log Out</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div style="float: right;" class="wrap-table200">
+  <div class="pad table100 ver1">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

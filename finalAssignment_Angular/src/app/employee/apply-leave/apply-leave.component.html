@@ -1,0 +1,37 @@
+<div class="pad container-table100">
+  <div class="wrap-table100">
+    <div class="pad table100 ver1">
+      <form #applyForm = "ngForm" class="pad form-group">
+        <div class="form-group">
+          <select class="form-control" id="leaveType" name="leaveType">
+            <option>Leave Type</option>
+            <option *ngFor='let leave of leaveService.leaveList' >
+              {{ leave.leaveName }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="from" >From:</label>
+            <input type="date"
+              required
+              placeholder="DD/MM/YYYY"
+              class="form-control"
+              id="from"
+              name="employeeDob">
+        </div>
+        <div class="form-group">
+          <label for="to" >To:</label>
+            <input type="date"
+              required
+              placeholder="DD/MM/YYYY"
+              class="form-control"
+              id="to"
+              name="employeeDob">
+        </div>
+        <button type="submit" class="btn btn-primary form-control">Apply</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<h1> {{ applyForm.value }} </h1>

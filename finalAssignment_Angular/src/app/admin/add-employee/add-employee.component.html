@@ -1,0 +1,78 @@
+
+
+
+<div class="container-table100">
+  <div class="wrap-table100">
+
+    <div>
+      <h4 style="text-align: center; padding: 0.5em; color: white;">Add Employee</h4>
+    </div>
+
+    <div class="pad table100 ver1">
+      <form #employeeForm="ngForm" autocomplete="off" (submit)="saveEmp(service.employee,employeeForm)" class="pad form-group">
+        <input type="hidden" name="employeeId" [value]="service.employee.emplyeeId" [(ngModel)]= "service.employee.emplyeeId"
+        />
+        <div class="form-group">
+            <input
+            name="employeeName"
+            id="employeeName"
+            #employeeName="ngModel"
+            [(ngModel)]= "service.employee.employeeName"
+            required
+            type="text"
+            class="form-control"
+            placeholder="Employee Name"
+            >
+        </div>
+        <div class="form-group">
+          <input
+          required
+          type="email"
+          #employeeEmail="ngModel"
+          [(ngModel)]= "service.employee.employeeEmail"
+          class="form-control"
+          placeholder="Email"
+          id="empEmail"
+          name="employeeEmail"
+          >
+        </div>
+        <div class="form-group">
+          <label for="joinDate" >Date of Joining:</label>
+            <input type="date"
+              required
+              #employeeDoj="ngModel"
+              class="form-control"
+              id="joinDate"
+              [(ngModel)]= "service.employee.employeeDoj"
+              name="employeeDoj"
+              placeholder="DD/MM/YYYY"
+              >
+        </div>
+
+        <div class="form-group">
+          <label for="dob" >Date of Birth:</label>
+            <input type="date"
+              required
+              placeholder="DD/MM/YYYY"
+              [(ngModel)]= "service.employee.employeeDob"
+              class="form-control"
+              id="dob"
+              name="employeeDob"
+              #employeeDob="ngModel">
+        </div>
+        <button type="submit" [disabled]="employeeForm.invalid" class="btn btn-primary form-control">Save</button>
+      </form>
+    </div>
+
+
+    <div style="margin-top: 0.4em;">
+      <button
+      style="background-color: whitesmoke;"
+      class="btn"
+      [routerLink]="['/admin/employeeList']">
+      Back
+    </button>
+    </div>
+  </div>
+</div>
+

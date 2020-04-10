@@ -1,0 +1,40 @@
+
+
+ <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table100 ver1">
+        <div class="table100-head">
+          <table>
+            <thead>
+              <tr class=" ">
+                <th class="column1">Emp Name</th>
+                <th class="column1">Start Date</th>
+                <th class="column1">End Date</th>
+                <th class="column1">Leave Type</th>
+                <th class="column1">Status</th>
+                <th class="column1">Action</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="table100-body">
+          <table>
+            <tbody>
+              <tr *ngFor='let empLMap of elmservice.empLeaveMapList'>
+                <td class="column1" >{{ empLMap.empName }}</td>
+                <td class="column1">{{ empLMap.leaveStartDate }}</td>
+                <td class="column1">{{ empLMap.leaveEndDate }}</td>
+                <td class="column1">{{ empLMap.leaveName }}</td>
+                <td class="column1">{{ empLMap.leaveStatus }}</td>
+                <td class="column2">
+                  <button title="Approve" data-placement="top" class="btn"><i class="fa fa-check"></i></button>
+                  <button title="Reject" data-placement="top" class="btn" style="margin-left: 0.6em;"><i class="fa fa-times"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

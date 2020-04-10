@@ -1,0 +1,47 @@
+.pad{
+  padding: 2.0em;
+}
+
+.btn {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container-table100 {
+  width: 100%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wrap-table100 {
+  width: 25%;
+}
+
+.wrap-table200 {
+  margin-left: 1.0em;
+  margin-right: 1.0em;
+  height: 100%;
+  width: 72%;
+}
+
+.table100 {
+  background-color: #fff;
+}
+
+.table100.ver1 {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
